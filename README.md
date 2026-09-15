@@ -24,34 +24,9 @@ Studi kasus ini dipilih karena secara natural memetakan konsep **inheritance**, 
 
 ## Hierarki Class / Diagram Kelas Sederhana
 
-```
-                 ┌─────────────────────┐
-                 │     Dinosaurus       │   (superclass)
-                 ├─────────────────────┤
-                 │ - id                │
-                 │ - nama              │
-                 │ - spesies           │
-                 │ - eraHidup          │
-                 ├─────────────────────┤
-                 │ + makan()           │
-                 │ + bersuara()        │
-                 │ + tampilkanInfo()   │
-                 └──────────┬──────────┘
-                            │ extends
-         ┌──────────────────┼──────────────────┐
-         │                  │                  │
-┌────────▼────────┐ ┌───────▼────────┐ ┌───────▼────────┐
-│    Karnivora     │ │   Herbivora    │ │    Omnivora     │
-├──────────────────┤ ├────────────────┤ ├─────────────────┤
-│ - jenisDaging     │ │ - jenisTanaman │ │ - makananCampuran│
-│   Favorit         │ │   Favorit      │ │                 │
-├──────────────────┤ ├────────────────┤ ├─────────────────┤
-│ + makan()  (ovr)   │ │ + makan() (ovr)│ │ + makan() (ovr) │
-│ + bersuara() (ovr)  │ │ + bersuara()(ovr)│ │ + bersuara()(ovr)│
-│ + tampilkanInfo()(ovr)│ │+ tampilkanInfo()(ovr)│ │+ tampilkanInfo()(ovr)│
-│ + berburu()        │ │ + menggembala() │ │ + berkamuflase()│
-└──────────────────┘ └────────────────┘ └─────────────────┘
-```
+<img width="1127" height="1536" alt="image" src="https://github.com/user-attachments/assets/a91c236a-484f-4c92-b463-eebb9184638f" />
+
+
 
 `Karnivora`, `Herbivora`, dan `Omnivora` merupakan subclass dari `Dinosaurus`. Ketiganya mewarisi atribut `id`, `nama`, `spesies`, dan `eraHidup`, lalu menambahkan atribut khusus masing-masing serta meng-override method `makan()`, `bersuara()`, dan `tampilkanInfo()`.
 
